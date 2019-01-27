@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Data Collector App</title>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../static/main.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Collecting income info</h1>
+			<h3>Please fill the entries to get population statistics on income</h3>
+			<div class="message">
+				{{text | safe}}
+			</div>
+			<form action="{{url_for('success')}}" method="POST">
+				<input title="Your email will be safe with us" type="email" placeholder="Enter your email address" name="email_name" required> <br>
+				<input title="Your data will be safe with us" type="number" min="50", max="1000000" placeholder="Enter your income" name="income_name" required> <br>
+				<button type="submit"> Submit </button>				
+			</form>
+		</div>
+	</body>
+</html>
